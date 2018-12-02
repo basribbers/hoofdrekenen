@@ -1,0 +1,5 @@
+blauw: #1e62d0
+Geel: FFD00F
+: bruin: A28200
+
+donker blauw: #082E6B

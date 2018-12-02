@@ -71,7 +71,7 @@ for (; i<5;i++){
   soortRd= document.getElementById('soort'+i);
 
   if (soortRd.checked){
-alert (soortRd.value);
+
   switch (soortRd.value) {
     case "optellen":
       soortSom="optellen";
@@ -96,7 +96,10 @@ soortRd.disabled=true;
       radioClass[i].style.color = "lightgray";
     }
 
-radioClass.style.color = "green";
+startBt.disabled = true;
+startBt.style.backgroundColor  ="lightgray";
+
+
 controleBt.disabled = false;
 antwElement.disabled = false;
 
@@ -156,6 +159,7 @@ uitslag.style.color="lightgreen";
 uitslag.style.visibility='visible';
 aantal_goed =aantal_goed+1;
 aantalGoedEl.innerHTML = "aantal sommen goed "+aantal_goed;
+alert (aantal_goed);
 }
 else
 {
