@@ -24,7 +24,8 @@ a:active {color: #1e62d0;text-decoration: none;}
 
 .radio {padding: 20px 0 20px 0;margin-top: 20px;}
 #startBt{margin-top: 20px;margin-left:5%;}
-label {font-size: 125px;color:#082E6B;}
+label {font-size: 125px;color:#082E6B;border:1px solid black;}
+
 .hoofd{border:1px solid black;
 
     }
@@ -51,3 +52,29 @@ button {padding: 15px; border:1px solid blue; font-size: 150%;width:100%;
 button:hover{cursor:pointer;background-color:#082E6B; }
 .score{font-size: 35px;}
 .fa-info-circle {margin-left: 5%;cursor:pointer;}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}

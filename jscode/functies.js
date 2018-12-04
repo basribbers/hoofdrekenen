@@ -145,6 +145,7 @@ vraagElement.innerHTML = a1 + ":" + a2 + "=";
 antwoord= a1/a2;
 }
 tellerEl.innerHTML = aantal + " van 10";
+if (aantal>9){einde();}
 antwElement.focus();
 
 
@@ -159,7 +160,7 @@ uitslag.style.color="lightgreen";
 uitslag.style.visibility='visible';
 aantal_goed =aantal_goed+1;
 aantalGoedEl.innerHTML = "aantal sommen goed "+aantal_goed;
-alert (aantal_goed);
+
 }
 else
 {
@@ -168,6 +169,11 @@ uitslag.style.color="red";
 uitslag.style.visibility='visible';
 }
 
+}
+
+function einde(){
+
+  
 }
 
 }
