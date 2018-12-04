@@ -5,6 +5,7 @@ var antwoord;
 var aantal_goed=0;
 var controle=false;
 var aantal =0;
+var rest=false;
 var vraagElement = document.getElementById('vraagId');
 var controleBt = document.getElementById('controleBt');
 var startBt = document.getElementById('startBt');
@@ -16,6 +17,8 @@ var aantalGoedEl = document.getElementById('aantal_goed');
 var radioMax1 = document.getElementById('max1');
 var radioBew1 = document.getElementById('soort1');
 var radioClass = document.getElementsByClassName ('radio');
+var tooltiptext = document.getElementById ('tooltiptext');
+var tooltip = document.getElementById ('tooltip');
 var maxRd;
 var soortRD;
 var max;
@@ -49,6 +52,16 @@ if (e.keyCode == 13){
    }
 }
 }, false);
+
+tooltip.addEventListener('mouseover', function(){
+      tooltiptext.style.visibility='visible';
+}, false);
+
+tooltip.addEventListener('mouseleave', function(){
+      tooltiptext.style.visibility='hidden';
+}, false);
+
+
 
 function start(){
 
@@ -125,22 +138,40 @@ aantal = aantal +1;
 uitslag.style.visibility='hidden';
 antwElement.value ='';
 vraagElement.innerHTML="";
-a1 = genereerGetal(max);
-a2 = genereerGetal(max);
+
+
+
+
 
 if (soortSom == "optellen") {
+  a1 = genereerGetal(max);
+  a2 = genereerGetal(max);
 vraagElement.innerHTML = a1 + "+" + a2 + "=";
 antwoord= a1+a2;
 }
 if (soortSom == "aftrekken") {
+  a1 = genereerGetal(max);
+  a2 = genereerGetal(max);
 vraagElement.innerHTML = a1 + "-" + a2 + "=";
 antwoord= a1-a2;
 }
 if (soortSom == "vermenigvuldigen") {
+  a1 = genereerGetal(max);
+  a2 = genereerGetal(max);
 vraagElement.innerHTML = a1 + "x" + a2 + "=";
 antwoord= a1*a2;
 }
 if (soortSom == "delen") {
+  rest=false;
+do {
+  a1 = genereerGetal(max);
+  a2 = genereerGetal(max);
+  if (a1%a2 == 0){
+    rest = true;
+
+  }
+
+} while (rest==false)
 vraagElement.innerHTML = a1 + ":" + a2 + "=";
 antwoord= a1/a2;
 }
@@ -173,7 +204,7 @@ uitslag.style.visibility='visible';
 
 function einde(){
 
-  
+
 }
 
 }

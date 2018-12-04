@@ -18,13 +18,13 @@ a:active {color: #1e62d0;text-decoration: none;}
 
 .grid-container {
   display: grid;
-  grid-template-columns: 10% 30% 30% 10% auto;
+  grid-template-columns: 10% 35% 35% 20% auto;
   background-color: white;
 }
 
 .radio {padding: 20px 0 20px 0;margin-top: 20px;}
-#startBt{margin-top: 20px;margin-left:5%;}
-label {font-size: 125px;color:#082E6B;border:1px solid black;}
+#startBt{margin-top: 20px;margin-left:5%;width:50%;}
+label {font-size: 100px;color:#082E6B;border:1px solid black;}
 
 .hoofd{border:1px solid black;
 
@@ -60,8 +60,8 @@ button:hover{cursor:pointer;background-color:#082E6B; }
 }
 
 /* Tooltip text */
-.tooltip .tooltiptext {
-    visibility: hidden;
+.tooltiptext {
+     visibility: hidden;
     width: 120px;
     background-color: black;
     color: #fff;
@@ -75,6 +75,3 @@ button:hover{cursor:pointer;background-color:#082E6B; }
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
